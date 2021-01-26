@@ -6,6 +6,11 @@
     <title>Weekdays</title>
   </head>
   <body>
-    <div><%=today%></div>
+    <% const weekDay1 = 'Friday'; %> <% const weekDay2 = 'Saturday'; %> <%
+    if(today.includes(weekDay1) || today.includes(weekDay2)){ %>
+    <div style="color: green"><%=today%></div>
+    <% }else{ %>
+    <div style="color: red"><%=today%></div>
+    <% } %>
   </body>
 </html>
