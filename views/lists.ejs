@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weekdays</title>
+    <title>WeekDay</title>
   </head>
   <body>
-    <% const weekDay1 = 'Friday'; %> <% const weekDay2 = 'Saturday'; %> <%
-    if(today.includes(weekDay1) || today.includes(weekDay2)){ %>
-    <div style="color: green"><%=today%></div>
-    <% }else{ %>
-    <div style="color: red"><%=today%></div>
-    <% } %>
+    <h1><%= today %></h1>
+    <ul>
+      <% for(const [i,val] of insideList.entries()){ %>
+      <li><%= val %></li>
+      <% } %>
+    </ul>
+    <form action="/" method="post">
+      <input type="text" name="listEntry" id="listEntry" />
+      <button type="submit">Add</button>
+    </form>
   </body>
 </html>
